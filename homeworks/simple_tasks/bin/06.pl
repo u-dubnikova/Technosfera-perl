@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+﻿#!/usr/bin/perl
 
 use strict;
 use warnings;
@@ -23,6 +23,9 @@ sub encode {
     my ($str, $key) = @_;
     my $encoded_str = '';
 
+	foreach my $ch (split //,$str) {
+		$encoded_str .= chr(ord($ch) +$key); }
+
     # ...
     # Алгоритм шифрования
     # ...
@@ -44,6 +47,9 @@ decode('$bcd', 1) - печатает '#abc'
 sub decode {
     my ($encoded_str, $key) = @_;
     my $str = '';
+
+	foreach my $ch (split //,$encoded_str) {
+		$str .=chr(ord($ch) - $key); }
 
     # ...
     # Алгоритм дешифрования

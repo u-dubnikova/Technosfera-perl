@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+﻿#!/usr/bin/perl
 
 use strict;
 use warnings;
@@ -22,15 +22,22 @@ run(1, 4) - печатает "2\n" и "3\n"
 
 =cut
 
+sub simple {
+	my $x = @_;
+	unless($x < 2) {
+		for (my $i=2; $i<$x; ++$i) {
+		if (($x%$i) != 0) {next;}
+			}
+	print $x; }
+}
+
+
 sub run {
     my ($x, $y) = @_;
     for (my $i = $x; $i <= $y; $i++) {
-
-        # ...
-        # Проверка, что число простое
-        # ...
-
-	print "$i\n";
+test($i);
+	
+	
     }
 }
 
