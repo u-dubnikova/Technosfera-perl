@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+﻿#!/usr/bin/perl
 
 use strict;
 use warnings;
@@ -35,6 +35,13 @@ sub run {
     #...
     #Вычисление корней
     #...
+
+	my $discr = $b_value**2 - 4*a_value*c_value;
+	if ($discr < 0) {print "No solution!\n";
+			return; }
+
+	$x1 = (-$b_value - sqrt($discr))/(2*$a_value);
+	$x2 = (-$b_value + sqrt($discr))/(2*$a_value);
 
     print "$x1, $x2\n";
 }
