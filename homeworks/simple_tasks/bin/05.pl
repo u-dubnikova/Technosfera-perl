@@ -1,4 +1,4 @@
-﻿#!/usr/bin/perl
+#!/usr/bin/perl
 
 use strict;
 use warnings;
@@ -30,8 +30,6 @@ sub run {
     my ($str, $substr) = @_;
     my $num = 0;
 
-	if (@matches = $str =~ /($substr)/g) {
-		$num = scalar @matches; }
     # ...
     # Вычисление количества вохождений строки $substr в строку $str,
     # ...

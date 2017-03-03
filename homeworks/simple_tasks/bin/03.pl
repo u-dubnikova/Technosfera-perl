@@ -1,4 +1,4 @@
-﻿#!/usr/bin/perl
+#!/usr/bin/perl
 
 use strict;
 use warnings;
@@ -27,12 +27,6 @@ sub run {
     my ($x, $y, $z) = @_;
     my $min = undef;
     my $max = undef;
-
-	$min = $x<$y ? $x:$y;
-	$min = $min<$z ? $min:$z;
-
-	$max = $x>$y ? $x:$y;
-	$max = $max>$z ? $max:$z;
 
     # ...
     # Вычисление минимума и максимума
