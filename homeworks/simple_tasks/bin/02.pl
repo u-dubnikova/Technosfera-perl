@@ -26,18 +26,20 @@ sub simple {
 	my $x = @_;
 	unless($x < 2) {
 		for (my $i = 2; $i < $x; $i++ ) {
-			if (($x % $i) == 0) { return; }
+			if (($x % $i) == 0) { return 0; }
 		}
-	print $x;
+	return 1;
  	}
+	return 0;
 }
 
 sub run {
     my ($x, $y) = @_;
     for (my $i = $x; $i <= $y; $i++) {
 	
-	simple($i);
-      
+		if(simple($i)==1){
+			print $i;
+		}
     }
 }
 
