@@ -43,7 +43,7 @@ sub run {
 	$x1 = (-$b_value - sqrt($discr))/(2*$a_value);
 	$x2 = (-$b_value + sqrt($discr))/(2*$a_value);
 
-    print "$x1, $x2\n";
+    print "$x2, $x1\n";
 }
 
 1;
