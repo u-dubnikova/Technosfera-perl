@@ -27,8 +27,8 @@ sub run {
     my ($x) = @_;
     my $num = 0;
 
-for ($i=0; $i<32; i++) {
-	if ($x & (1<<$i)) {
+for ( my $i = 0; $i < 32; i++) {
+	if ($x & ( 1 << $i )) {
 	$num = $i;
 	last; }
 	

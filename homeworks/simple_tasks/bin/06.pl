@@ -24,7 +24,7 @@ sub encode {
     my $encoded_str = '';
 
 	foreach my $ch (split //,$str) {
-		$encoded_str .= chr(ord($ch) +$key); }
+		$encoded_str .= chr((ord($ch) +$key)%128); }
 
     # ...
     # Алгоритм шифрования
@@ -49,7 +49,7 @@ sub decode {
     my $str = '';
 
 	foreach my $ch (split //,$encoded_str) {
-		$str .=chr(ord($ch) - $key); }
+		$str .=chr((ord($ch) - $key)%128); }
 
     # ...
     # Алгоритм дешифрования

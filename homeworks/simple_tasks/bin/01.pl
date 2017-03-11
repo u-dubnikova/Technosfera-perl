@@ -36,8 +36,8 @@ sub run {
     #Вычисление корней
     #...
 
-	my $discr = $b_value**2 - 4*a_value*c_value;
-	if ($discr < 0) {print "No solution!\n";
+	my $discr = $b_value**2 - 4*$a_value*$c_value;
+	if ($discr < 0 || $a_value == 0) {print "No solution!\n";
 			return; }
 
 	$x1 = (-$b_value - sqrt($discr))/(2*$a_value);

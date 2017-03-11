@@ -30,7 +30,7 @@ sub run {
     my ($str, $substr) = @_;
     my $num = 0;
 
-	if (@matches = $str =~ /($substr)/g) {
+	if (my @matches = $str =~ /($substr)/g) {
 		$num = scalar @matches; }
     # ...
     # Вычисление количества вохождений строки $substr в строку $str,
