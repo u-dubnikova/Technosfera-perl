@@ -37,7 +37,7 @@ sub run {
     my ($x, $y) = @_;
     for (my $i = $x; $i <= $y; $i++) {
 	
-		if(simple($i)==1){
+		if(simple($i)>0){
 			print $i;
 		}
     }
